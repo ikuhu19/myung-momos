@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myung's Momos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="images/logo.jpg" alt="Myung's Momos Logo" class="rounded-circle me-2" style="width: 48px; height: 48px; object-fit: cover;">
+                <span class="fs-4 fw-bold">Myung's Momos</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Where to find us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Our Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="carousel-section position-relative fade-in">
+        <div class="carousel-images">
+            <img src="images/pic1.jpg" alt="Picture 1" class="carousel-image">
+            <img src="images/pic2.jpg" alt="Picture 2" class="carousel-image">
+            <img src="images/pic3.jpg" alt="Picture 3" class="carousel-image">
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots">
+                <span class="carousel-dot" data-index="0"></span>
+                <span class="carousel-dot" data-index="1"></span>
+                <span class="carousel-dot" data-index="2"></span>
+            </div>
+        </div>
+        <div class="container text-center position-relative z-10 py-5">
+            <h2 class="display-4 fw-bold text-white mb-4">Myung's Momos</h2>
+            <p class="fs-3 mb-4 text-white">Authentic Himalayan Flavors Crafted with Love</p>
+            <p class="fs-5 mb-5 text-white mx-auto" style="max-width: 600px;">Experience the true taste of Nepal with our hand-folded momos, made from fresh local ingredients and time-honored family recipes.</p>
+            <a href="#menu" class="btn btn-success btn-lg rounded-pill">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Our Promise Section -->
+    <section id="promise" class="py-5 fade-in section-bg" style="background-image: url('images/img3.jpg');">
+        <div class="container text-center bg-white p-4 rounded shadow">
+            <h2 class="display-6 fw-bold mb-4">The Art of the Perfect Momo</h2>
+            <p class="fs-5 mb-5">We're obsessed with quality, and we believe you can taste the difference. When you eat at Myung's, you are experiencing our commitment to authenticity and craft.</p>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm promise-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Always Hand-Folded</h3>
+                            <p class="card-text">We don't use machines. Each momo is folded by hand with precision and care, ensuring the perfect texture and seal. It’s a labor of love, and it’s non-negotiable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm promise-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Market-Fresh Ingredients</h3>
+                            <p class="card-text">Our fillings are made daily using fresh, locally sourced vegetables and high-quality meats. We believe the best flavor starts with the best ingredients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm promise-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">The Secret is in the Spices</h3>
+                            <p class="card-text">Our spice blends are a closely guarded family secret, a unique mix of Himalayan herbs and spices that give our momos their signature, unforgettable flavor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm promise-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">That Signature Sauce</h3>
+                            <p class="card-text">A momo is nothing without its achar (dipping sauce). Ours is made from scratch every morning, a fiery, tangy, and nutty companion that perfectly complements every bite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Our Story Section -->
+<section id="story" class="py-5 fade-in section-bg" style="background-image: url('images/img2.jpg');">
+    <div class="container text-center bg-white p-4 rounded shadow">
+        <h2 class="display-6 fw-bold mb-4">A Mother’s Passion, A Son’s Promise</h2>
+        <p class="fs-5 mb-4 mx-auto" style="max-width: 700px;">
+            In a quiet kitchen filled with the comforting scent of steaming dumplings, a mother poured her heart into every fold of a momo. What began as a simple love for cooking soon became her way of sharing warmth with friends and neighbors. 
+        </p>
+        <p class="fs-5 mb-4 mx-auto" style="max-width: 700px;">
+            Watching her, her son grew up not just tasting those delicate parcels of flavor, but learning the value of dedication and love. He saw her eyes light up when people smiled after the first bite, and he knew this was more than food—it was her dream.
+        </p>
+        <p class="fs-5 mb-4 mx-auto" style="max-width: 700px;">
+            Together, they decided to take that dream beyond their small kitchen. With his support and her timeless recipes, <strong>Myung's Momos</strong> was born—a place where every plate carries a story of family, perseverance, and the magic that happens when passion meets love.
+        </p>
+    </div>
+</section>
+
+
+    <!-- Featured Menu Section -->
+    <section id="menu" class="py-5 fade-in section-bg" style="background-image: url('images/img4.jpg');">
+        <div class="container text-center bg-white p-4 rounded shadow">
+            <h2 class="display-6 fw-bold mb-4">Our Menu</h2>
+            <p class="fs-5 mb-5">Whether you're a seasoned enthusiast or a curious newcomer, our menu has something to delight your palate. Explore our momos, noodles, and more!</p>
+            <!-- Menu Items -->
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Veg. Momos (8 pcs)</h3>
+                            <p class="card-text">Steamed momos filled with fresh vegetables and traditional Nepalese spices for a wholesome bite.</p>
+                            <p class="mt-2 fw-bold text-price">₹50</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Veg. Momos (8 pcs)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Rose Momos (5 pcs)</h3>
+                            <p class="card-text">Beautifully shaped momos with savory fillings, steamed to perfection.</p>
+                            <p class="mt-2 fw-bold text-price">₹50</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Rose Momos (5 pcs)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Paneer Momos (8 pcs)</h3>
+                            <p class="card-text">Creamy paneer wrapped in soft dough with aromatic spices—a favorite for cheese lovers.</p>
+                            <p class="mt-2 fw-bold text-price">₹60</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Paneer Momos (8 pcs)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Cheese Momos (8 pcs)</h3>
+                            <p class="card-text">Cheesy delight inside every momo, blended with fresh herbs for an irresistible treat.</p>
+                            <p class="mt-2 fw-bold text-price">₹80</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Cheese Momos (8 pcs)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Veg. Noodles</h3>
+                            <p class="card-text">Tasty and thin noodles stir-fried with vegetables.</p>
+                            <p class="mt-2 fw-bold text-price">₹80</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Veg. Noodles">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Schezwan Noodles</h3>
+                            <p class="card-text">Spicy and flavorful noodles tossed in a tangy Schezwan sauce.</p>
+                            <p class="mt-2 fw-bold text-price">₹80</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Schezwan Noodles">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Paneer Noodles</h3>
+                            <p class="card-text">Creamy paneer tossed with noodles and vegetables in a savory sauce.</p>
+                            <p class="mt-2 fw-bold text-price">₹80</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Paneer Noodles">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Veg Pasta</h3>
+                            <p class="card-text">Warm, comforting pasta with a medley of vegetables in a creamy sauce.</p>
+                            <p class="mt-2 fw-bold text-price">₹80</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Veg Pasta">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm menu-card">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4 fw-semibold mb-2">Cheese Pasta (White and Red Sauce)</h3>
+                            <p class="card-text">Creamy pasta with rich cheese sauce and a hint of garlic.</p>
+                            <p class="mt-2 fw-bold text-price">₹90</p>
+                            <button class="btn btn-primary btn-sm mt-2 add-to-cart-btn" data-item="Cheese Pasta (White and Red Sauce)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cart Display -->
+            <div class="cart-container mt-5">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title fs-4 fw-semibold mb-3">Your Cart</h3>
+                        <ul id="cart-items" class="list-unstyled mb-0"></ul>
+                        <p id="cart-empty" class="text-muted mb-0">Your cart is empty.</p>
+                        <a href="#" id="order-cart-btn" class="btn btn-primary btn-sm mt-3 d-none">View Cart & Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- From Our Customers Section -->
+    <section id="customers" class="py-5 fade-in section-bg" style="background-image: url('images/img1.jpg');">
+        <div class="container text-center bg-white p-4 rounded shadow">
+            <h2 class="display-6 fw-bold mb-4">Don't Just Take Our Word For It...</h2>
+            <p class="fs-5 mb-4 mx-auto">"Absolutely the best momos in the city. You can taste the freshness and the love that goes into them. The dipping sauce is incredible!" - Kuhu K.</p>
+            <p class="fs-5 mb-4 mx-auto">"Felt like I was transported back to Nepal. Authentic, delicious, and the family that runs it is so welcoming. This is my new favorite spot." - Shubham R.</p>
+            <p class="fs-5 mb-4 mx-auto">"The Jhol Momos are a must-try! It's the perfect comfort food. I could eat here every week." - Priya K.</p>
+        </div>
+    </section>
+
+    <!-- Contact & Visit Us Section -->
+    <section id="contact" class="py-5 fade-in">
+        <div class="container text-center">
+            <h2 class="display-6 fw-bold mb-4">Get in Touch</h2>
+            <p class="fs-5 mb-4 mx-auto" style="max-width: 700px;">We'd love to hear from you! Stop by for a meal, or place an order to enjoy our momos at home.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+                <a href="https://wa.me/7999921743?text=I%20want%20to%20order" class="btn btn-primary btn-lg rounded-pill">Order for Pickup/Delivery</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Old+Sagar+Estate+Colony,+Makronia,+India" class="btn btn-success btn-lg rounded-pill">Get Directions</a>
+            </div>
+            <p class="fs-5 mb-2">Address: Old Sagar Estate Colony, Makronia, India</p>
+            <p class="fs-5 mb-4">Phone: +91 79999 21743</p>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="https://wa.me/7999921743" class="text-dark fs-3"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.instagram.com/nisharai3389/" class="text-dark fs-3"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark-custom text-white text-center">
+        <div class="container">
+            <p>&copy; 2025 Myung's Momos. All rights reserved.</p>
+        </div>
+    </footer>
+
+   <!-- React CDN -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- Babel (JSX ke liye) -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- React Script -->
+<script type="text/babel" src="script.js"></script>
+
+<div id="root"></div> 
+</body>
+</html>

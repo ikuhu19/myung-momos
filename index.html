@@ -21,14 +21,24 @@
             <img src="images/logo.jpg" alt="Myung's Momos Logo">
         </a>
 
-        <ul class="nav-links">
+        <!-- Hamburger Icon for Mobile -->
+        <button class="hamburger" aria-label="Toggle navigation" id="hamburger-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#story">Our Story</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Visit Us</a></li>
+            <li class="mobile-order-li">
+                <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="order-btn" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Order Now
+                </a>
+            </li>
         </ul>
 
-        <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="order-btn" target="_blank">
+        <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="order-btn desktop-order-btn" target="_blank">
             <i class="fa-brands fa-whatsapp"></i> Order Now
         </a>
     </nav>
@@ -63,8 +73,7 @@
 
     <div class="story-content">
         <span class="section-badge">OUR STORY</span>
-        <!-- Example in your Story Section -->
-<h2>A Mother's Passion.<br><span class="gold-gradient-text">A Son's Promise.</span></h2>
+        <h2>A Mother's Passion.<br><span class="gold-gradient-text">A Son's Promise.</span></h2>
         <p class="quote">"Every momo carries a piece of our family's journey."</p>
 
         <p>
@@ -103,7 +112,7 @@
         </div>
     </div>
 </section>
- 
+
 <div class="marquee-wrapper">
     <div class="marquee-content">
         <span>AUTHENTIC DARJEELING RECIPE</span> • 
@@ -113,7 +122,6 @@
         <span>SERVED WITH LOVE IN SAGAR</span> • 
     </div>
 </div>
-
 
 <section class="kitchen" id="gallery">
     <div class="section-title">
@@ -160,7 +168,6 @@
 <footer class="luxury-footer">
     <div class="footer-container">
         
-        <!-- Brand & Vision Column -->
         <div class="footer-col brand-col">
             <a href="#home" class="footer-logo">
                 <img src="images/logo.jpg" alt="Myung's Momos Logo">
@@ -170,7 +177,6 @@
                 Handcrafted Himalayan dumplings, delicate paper-thin wraps, and signature spicy chutneys—bringing authentic hill-country warmth straight to Sagar.
             </p>
             
-            <!-- Live Instagram Badge -->
             <a href="https://instagram.com/yourusername" target="_blank" class="insta-badge">
                 <div class="insta-icon-wrapper">
                     <i class="fa-brands fa-instagram"></i>
@@ -183,18 +189,15 @@
             </a>
         </div>
 
-        <!-- Quick Links Column -->
         <div class="footer-col links-col">
             <h4 class="footer-heading">Navigation</h4>
             <ul class="footer-nav">
                 <li><a href="#home">Home Experience</a></li>
-                <li><a href="#about">Our Heritage</a></li>
+                <li><a href="#story">Our Heritage</a></li>
                 <li><a href="#gallery">Kitchen Gallery</a></li>
-
             </ul>
         </div>
 
-        <!-- Location & Hours Column -->
         <div class="footer-col info-col">
             <h4 class="footer-heading">Visit Our Outlet</h4>
             <ul class="info-list">
@@ -215,7 +218,6 @@
 
     </div>
 
-    <!-- Bottom Copyright & Legal Bar -->
     <div class="footer-bottom">
         <div class="footer-bottom-container">
             <p>© 2026 Myung's Momos. All Rights Reserved.</p>
@@ -223,7 +225,8 @@
         </div>
     </div>
 </footer>
-<script src="js/script.js"></script>
+
+<!-- Floating Actions -->
 <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="floating-wa" target="_blank" aria-label="Order on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
@@ -237,10 +240,7 @@
 </a>
 
 <!-- JavaScript Files -->
-    <script src="js/script.js"></script>
-    <script src="js/responsive.js"></script>
-</body>
-</html>
-
+<script src="js/script.js"></script>
+<script src="js/responsive.js"></script>
 </body>
 </html>

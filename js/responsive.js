@@ -1,59 +1,62 @@
-/**
- * MYUNG'S MOMOS - Responsive Navigation & Touch Handlers
- * Dedicated script for mobile menu toggles, drawer state, and screen event listeners.
- */
+/* ==========================================================================
+   MYUNG'S MOMOS - RESPONSIVE NAVIGATION & INTERACTIONS
+   ========================================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-    // DOM Elements
-    const hamburgerBtn = document.getElementById("hamburgerBtn");
-    const navLinks = document.getElementById("navLinks");
-    const mobileOverlay = document.getElementById("mobileOverlay");
-    const navItems = document.querySelectorAll(".nav-item");
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-links a');
 
-    // Toggle Mobile Drawer Menu
-    function toggleMobileMenu() {
-        if (!navLinks || !mobileOverlay || !hamburgerBtn) return;
+    // 1. Toggle Mobile Menu On Hamburger Click
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('nav-active');
 
-        const isOpen = navLinks.classList.toggle("active");
-        mobileOverlay.classList.toggle("active", isOpen);
-
-        // Toggle icon between hamburger bars and close icon (X)
-        const icon = hamburgerBtn.querySelector("i");
-        if (icon) {
-            if (isOpen) {
-                icon.classList.remove("fa-bars-staggered");
-                icon.classList.add("fa-xmark");
-                document.body.style.overflow = "hidden"; // Prevent background page scrolling when menu is open
-            } else {
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars-staggered");
-                document.body.style.overflow = ""; // Re-enable background scrolling
+            // Switch Icon between Bars and Times (X)
+            const icon = hamburgerBtn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
             }
-        }
+        });
     }
 
-    // Event Listeners
-    if (hamburgerBtn) {
-        hamburgerBtn.addEventListener("click", toggleMobileMenu);
-    }
-
-    if (mobileOverlay) {
-        mobileOverlay.addEventListener("click", toggleMobileMenu);
-    }
-
-    // Auto-close drawer when a menu link is tapped
-    navItems.forEach(item => {
-        item.addEventListener("click", () => {
-            if (navLinks && navLinks.classList.contains("active")) {
-                toggleMobileMenu();
+    // 2. Close Menu when clicking any Navigation Link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu.classList.contains('nav-active')) {
+                navMenu.classList.remove('nav-active');
+                const icon = hamburgerBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                }
             }
         });
     });
 
-    // Handle screen resize: reset drawer state if resized back to desktop (width > 992px)
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 992 && navLinks && navLinks.classList.contains("active")) {
-            toggleMobileMenu();
+    // 3. Close Menu when clicking Outside of Header
+    document.addEventListener('click', (e) => {
+        if (navMenu && navMenu.classList.contains('nav-active')) {
+            if (!navbar.contains(e.target)) {
+                navMenu.classList.remove('nav-active');
+                const icon = hamburgerBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                }
+            }
+        }
+    });
+
+    // 4. Scroll Effect for Navbar Glassmorphism
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
     });
 });

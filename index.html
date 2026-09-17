@@ -3,246 +3,727 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myung's Momos | From the Hills to Your Home</title>
-
-    <!-- Typography & Icons -->
+    <title>Myung's Momos | Authentic Darjeeling-Style Momos in Sagar, M.P.</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Authentic Darjeeling-style handcrafted momos in Sagar, M.P. Delicate paper-thin wrappers, fresh Himalayan herbs, and signature fiery garlic chutney. Order on WhatsApp: +91 79999 21743.">
+    <meta name="keywords" content="Myung's Momos, Darjeeling momos Sagar, authentic momos Makronia, steamed momos Madhya Pradesh, best momos Sagar">
+    <meta name="author" content="Myung's Momos">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="Myung's Momos | From the Hills to Your Home">
+    <meta property="og:description" content="Authentic Darjeeling-style momos handcrafted daily with a mother's recipe and signature fiery garlic chutney in Sagar, M.P.">
+    <meta property="og:image" content="images/hero-steam.jpg">
+    <meta property="og:url" content="https://ikuhu19.github.io/myung-momos/">
+    
+    <!-- Google Fonts & Font Awesome Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Myung's Momos",
+      "image": "https://ikuhu19.github.io/myung-momos/images/hero-steam.jpg",
+      "description": "Authentic Darjeeling-style handcrafted momos with paper-thin wrappers, fresh ingredients, and signature fiery garlic chutney.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Opposite Narayan Hospital, Makronia",
+        "addressLocality": "Sagar",
+        "addressRegion": "Madhya Pradesh",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91 79999 21743",
+      "servesCuisine": "Himalayan / Darjeeling Momos",
+      "openingHours": "Mo-Su 19:00-22:00",
+      "priceRange": "₹₹",
+      "sameAs": [
+        "https://www.instagram.com/myungsmomos.sagar"
+      ]
+    }
+    </script>
 </head>
 <body>
 
-<header>
-    <nav class="navbar">
-        <a href="#home" class="logo">
-            <img src="images/logo.jpg" alt="Myung's Momos Logo">
-        </a>
-
-        <!-- Hamburger Icon for Mobile -->
-        <button class="hamburger" aria-label="Toggle navigation" id="hamburger-btn">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <ul class="nav-links" id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#story">Our Story</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Visit Us</a></li>
-            <li class="mobile-order-li">
-                <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="order-btn" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> Order Now
+    <!-- ================= STICKY NAVIGATION ================= -->
+    <header class="site-header" id="header">
+        <div class="container">
+            <nav class="nav-inner" aria-label="Main Navigation">
+                <a href="#home" class="brand-link" aria-label="Myung's Momos Home">
+                    <img src="images/logo.jpg" alt="Myung's Momos Logo" class="brand-logo-img">
+                    <div class="brand-text">
+                        <span class="brand-title">Myung's Momos</span>
+                        <span class="brand-tag">Himalayan Craft</span>
+                    </div>
                 </a>
-            </li>
+
+                <ul class="nav-links-desktop">
+                    <li><a href="#home" class="nav-item-link">Home</a></li>
+                    <li><a href="#story" class="nav-item-link">Our Story</a></li>
+                    <li><a href="#craftsmanship" class="nav-item-link">Craftsmanship</a></li>
+                    <li><a href="#gallery" class="nav-item-link">Gallery</a></li>
+                    <li><a href="#reviews" class="nav-item-link">Customer Love</a></li>
+                    <li><a href="#visit" class="nav-item-link">Visit Us</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos%20from%20Myung's%20Momos." 
+                       class="btn btn-whatsapp btn-nav-order desktop-only-order" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Order on WhatsApp">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <span>Order on WhatsApp</span>
+                    </a>
+
+                    <!-- Mobile Menu Hamburger Button -->
+                    <button class="mobile-hamburger" id="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-out Drawer Menu -->
+    <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+    <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu">
+        <div class="drawer-top">
+            <div class="brand-link">
+                <img src="images/logo.jpg" alt="Myung's Momos" class="brand-logo-img">
+                <div class="brand-text">
+                    <span class="brand-title">Myung's Momos</span>
+                    <span class="brand-tag">Darjeeling Style</span>
+                </div>
+            </div>
+            <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <ul class="drawer-nav-list">
+            <li><a href="#home" class="drawer-link"><span>Home</span><i class="fa-solid fa-arrow-right"></i></a></li>
+            <li><a href="#story" class="drawer-link"><span>Our Story</span><i class="fa-solid fa-arrow-right"></i></a></li>
+            <li><a href="#craftsmanship" class="drawer-link"><span>Craftsmanship</span><i class="fa-solid fa-arrow-right"></i></a></li>
+            <li><a href="#gallery" class="drawer-link"><span>Gallery</span><i class="fa-solid fa-arrow-right"></i></a></li>
+            <li><a href="#reviews" class="drawer-link"><span>Customer Love</span><i class="fa-solid fa-arrow-right"></i></a></li>
+            <li><a href="#visit" class="drawer-link"><span>Visit Us</span><i class="fa-solid fa-arrow-right"></i></a></li>
         </ul>
 
-        <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="order-btn desktop-order-btn" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> Order Now
-        </a>
-    </nav>
-</header>
-
-<section class="hero" id="home">
-    <video autoplay muted loop playsinline class="hero-video">
-        <source src="video/hero.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <span class="tagline">FROM THE HILLS TO YOUR HOME</span>
-        <h1>Authentic Darjeeling Momos</h1>
-        <p class="hero-text">
-            Freshly steamed with authentic Himalayan flavors, crafted from a mother's recipe and served with love.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#gallery" class="btn primary-btn">View Our Fresh Kitchen</a>
-            <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="btn secondary-btn" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+        <div class="drawer-footer">
+            <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos%20from%20Myung's%20Momos." 
+               class="btn btn-whatsapp" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <span>Order on WhatsApp</span>
             </a>
-        </div>
-    </div>
-</section>
-
-<section class="story" id="story">
-    <div class="story-image">
-        <img src="images/momo roy.jpeg" alt="Handcrafted Momos">
-    </div>
-
-    <div class="story-content">
-        <span class="section-badge">OUR STORY</span>
-        <h2>A Mother's Passion.<br><span class="gold-gradient-text">A Son's Promise.</span></h2>
-        <p class="quote">"Every momo carries a piece of our family's journey."</p>
-
-        <p>
-            In a quiet kitchen filled with the comforting aroma of steaming momos, a mother lovingly folded every dumpling by hand. What began as a simple passion for cooking soon became her way of sharing warmth with everyone around her.
-        </p>
-        <p>
-            Inspired by her dedication, her son turned that dream into <strong>Myung's Momos</strong>—bringing authentic Darjeeling flavours from the hills to every customer with love.
-        </p>
-    </div>
-</section>
-
-<section class="anatomy-section">
-    <div class="section-title">
-        <span class="section-badge">CRAFTSMANSHIP</span>
-        <h2>The Anatomy of Perfection</h2>
-        <p>What makes a true Darjeeling Momo different from the rest.</p>
-    </div>
-
-    <div class="anatomy-grid">
-        <div class="anatomy-card">
-            <div class="anatomy-icon">01</div>
-            <h3>Paper-Thin Wrapper</h3>
-            <p>Hand-rolled dough so delicate it locks in steam without feeling dense or doughy.</p>
-        </div>
-
-        <div class="anatomy-card highlight">
-            <div class="anatomy-icon">02</div>
-            <h3>Slow-Marinated Filling</h3>
-            <p>Fresh vegetables and cottage cheese mixed with traditional Himalayan ginger and herbs.</p>
-        </div>
-
-        <div class="anatomy-card">
-            <div class="anatomy-icon">03</div>
-            <h3>Fiery Garlic Chutney</h3>
-            <p>Ground daily from sun-dried red chilies, fresh garlic, and roasted tomatoes.</p>
-        </div>
-    </div>
-</section>
-
-<div class="marquee-wrapper">
-    <div class="marquee-content">
-        <span>AUTHENTIC DARJEELING RECIPE</span> • 
-        <span>HANDCRAFTED DAILY</span> • 
-        <span>SIGNATURE GARLIC RED CHUTNEY</span> • 
-        <span>100% FRESH INGREDIENTS</span> • 
-        <span>SERVED WITH LOVE IN SAGAR</span> • 
-    </div>
-</div>
-
-<section class="kitchen" id="gallery">
-    <div class="section-title">
-        <span class="section-badge">FRESH FROM OUR KITCHEN</span>
-        <h2>Every Plate Tells a Story</h2>
-        <p>From handcrafted momos to happy moments, here's a glimpse of what makes Myung's Momos special.</p>
-    </div>
-
-    <div class="gallery-grid">
-        <div class="gallery-item large">
-            <img src="images/momo5.jpg" alt="Fresh Momos">
-        </div>
-        <div class="gallery-item">
-            <img src="images/momo raw.jpg" alt="Veg Momos">
-        </div>
-        <div class="gallery-item">
-            <img src="images/momo raw 2.jpg" alt="Fresh Prep">
-        </div>
-        <div class="gallery-item wide">
-            <img src="images/momo roy clear.jpg" alt="Steamed Momos">
-        </div>
-    </div>
-</section>
-
-<section class="cta" id="contact">
-    <div class="cta-overlay"></div>
-    <div class="cta-content">
-        <span class="section-badge badge-light">VISIT MYUNG'S MOMOS</span>
-        <h2>Freshly Steamed.<br>Served with Love.</h2>
-        <p>Experience authentic Darjeeling-style momos made fresh every day. We can't wait to welcome you.</p>
-
-        <div class="cta-info">
-            <p><i class="fa-solid fa-location-dot"></i> Opposite Narayan Hospital, Makronia, Sagar</p>
-            <p><i class="fa-solid fa-phone"></i> +91 79999 21743</p>
-        </div>
-
-        <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="cta-btn" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
-        </a>
-    </div>
-</section>
-
-<!-- LUXURY GLASS FOOTER -->
-<footer class="luxury-footer">
-    <div class="footer-container">
-        
-        <div class="footer-col brand-col">
-            <a href="#home" class="footer-logo">
-                <img src="images/logo.jpg" alt="Myung's Momos Logo">
-                <span class="brand-name">Myung's Momos</span>
-            </a>
-            <p class="brand-tagline">
-                Handcrafted Himalayan dumplings, delicate paper-thin wraps, and signature spicy chutneys—bringing authentic hill-country warmth straight to Sagar.
+            <p class="drawer-meta">
+                Opposite Narayan Hospital, Makronia, Sagar<br>
+                Open Daily: 7:00 PM – 10:00 PM
             </p>
-            
-            <a href="https://instagram.com/yourusername" target="_blank" class="insta-badge">
-                <div class="insta-icon-wrapper">
-                    <i class="fa-brands fa-instagram"></i>
+        </div>
+    </aside>
+
+    <main>
+        <!-- ================= HERO SECTION ================= -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content fade-in-up">
+                        <div class="eyebrow-badge">
+                            <i class="fa-solid fa-mountain" aria-hidden="true"></i>
+                            <span>FROM THE HILLS TO YOUR HOME</span>
+                        </div>
+                        <h1 class="hero-headline">
+                            Authentic Darjeeling Momos, <span class="accent-serif">Made with Love.</span>
+                        </h1>
+                        <p class="hero-desc">
+                            Freshly steamed with authentic Himalayan flavours, crafted from a mother’s recipe and served with love.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos%20from%20Myung's%20Momos." 
+                               class="btn btn-whatsapp" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                            <a href="#story" class="btn btn-secondary">
+                                <span>Explore Our Story</span>
+                                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="hero-highlights">
+                            <div class="hero-stat">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label">Hand-Folded Daily</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="stat-value">Paper-Thin</span>
+                                <span class="stat-label">Authentic Wrappers</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="stat-value">Fiery</span>
+                                <span class="stat-label">Fresh Garlic Chutney</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-media-wrapper fade-in-up stagger-1">
+                        <div class="hero-image-card">
+                            <img src="images/hero-steam.jpg" alt="Freshly steamed authentic Darjeeling momos in bamboo steamer with signature red garlic chutney" width="1200" height="675" loading="eager">
+                            <div class="hero-badge-floating">
+                                <div class="badge-icon-wrap">
+                                    <i class="fa-solid fa-fire-burner" aria-hidden="true"></i>
+                                </div>
+                                <div class="badge-text-wrap">
+                                    <span class="badge-title">Fresh Batches Daily</span>
+                                    <span class="badge-sub">Steamed hot on order from 7:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="insta-text">
-                    <span class="subtext">FOLLOW OUR JOURNEY</span>
-                    <span class="handle">@myungsmomos.sagar</span>
+            </div>
+        </section>
+
+        <!-- ================= BRAND VALUES STRIP ================= -->
+        <section class="brand-strip-section" aria-label="Brand Highlights">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span class="marquee-item">Authentic Darjeeling Recipe <i class="fa-solid fa-circle marquee-dot"></i></span>
+                    <span class="marquee-item">Handcrafted Daily <i class="fa-solid fa-circle marquee-dot"></i></span>
+                    <span class="marquee-item">Signature Garlic Chutney <i class="fa-solid fa-circle marquee-dot"></i></span>
+                    <span class="marquee-item">100% Fresh Ingredients <i class="fa-solid fa-circle marquee-dot"></i></span>
+                    <span class="marquee-item">Served with Love in Sagar <i class="fa-solid fa-circle marquee-dot"></i></span>
                 </div>
-                <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-            </a>
+                <div class="marquee-group" aria-hidden="true">
+                    <span class="marquee-item">Authentic Darjeeling Recipe <i class="fa-solid fa-circle marquee-dot"></i></span>
+                    <span class="marquee-item">Handcrafted Daily <i class="fa-solid fa-circle marquee-dot"></i></span>
+                    <span class="marquee-item">Signature Garlic Chutney <i class="fa-solid fa-circle marquee-dot"></i></span>
+                    <span class="marquee-item">100% Fresh Ingredients <i class="fa-solid fa-circle marquee-dot"></i></span>
+                    <span class="marquee-item">Served with Love in Sagar <i class="fa-solid fa-circle marquee-dot"></i></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= OUR STORY ================= -->
+        <section class="story-section" id="story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-media fade-in-up">
+                        <div class="story-img-container">
+                            <img src="images/mother-story.jpg" alt="Mother and son preparing handmade authentic momos together in kitchen" width="900" height="675" loading="lazy">
+                        </div>
+                        <div class="story-stamp">
+                            <span>Heritage</span>
+                            <strong>Recipe</strong>
+                            <span>Darjeeling</span>
+                        </div>
+                    </div>
+
+                    <div class="story-content fade-in-up stagger-1">
+                        <div class="eyebrow-badge">
+                            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                            <span>OUR HERITAGE & HEART</span>
+                        </div>
+                        <h2>A Mother’s Passion.<br><span class="accent-serif">A Son’s Promise.</span></h2>
+                        <blockquote class="story-quote">
+                            “Every momo carries a piece of our family’s journey and the true warmth of the hills.”
+                        </blockquote>
+                        <div class="story-paragraphs">
+                            <p>
+                                In a quiet home filled with the comforting aroma of steaming bamboo baskets, a mother lovingly folded every dumpling by hand. For her, rolling dough to sheer translucence and balancing Himalayan herbs wasn’t just cooking—it was her purest way of sharing warmth and nourishment with family.
+                            </p>
+                            <p>
+                                Growing up on these flavors, her son made a heartfelt promise: never to compromise on genuine Darjeeling craftsmanship and to bring that authentic, comforting mountain taste down to the heart of Sagar, Madhya Pradesh.
+                            </p>
+                            <p>
+                                That promise is <strong>Myung’s Momos</strong>. No artificial flavor enhancers, no thick factory-made skins. Just honest, hand-pleated momos made every evening with family devotion.
+                            </p>
+                        </div>
+                        <div class="story-signature-row">
+                            <div>
+                                <div class="story-signature-name">Myung's Family Kitchen</div>
+                                <div class="story-signature-role">Darjeeling-Style Culinary Artisans • Sagar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MADE FRESH EVERY DAY — VIDEO SECTION ================= -->
+        <section class="video-showcase-section" aria-label="Handcrafted Kitchen Showcase">
+            <div class="video-section-wrapper">
+                <!-- Static Fallback Image for low power / slow connections -->
+                <img src="images/hero-steam.jpg" alt="Fresh momos steaming in kitchen" class="video-fallback-img">
+                
+                <!-- Looping Muted Background Video -->
+                <video autoplay muted loop playsinline id="kitchen-bg-video" class="video-bg-player" poster="images/hero-steam.jpg">
+                    <source src="video/hero.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+
+            <div class="video-overlay-tint"></div>
+
+            <div class="container video-overlay-content fade-in-up">
+                <div class="eyebrow-badge badge-light">
+                    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                    <span>HANDCRAFTED WITH LOVE</span>
+                </div>
+                <h2>From Our Kitchen to Your Table</h2>
+                <p>
+                    Every momo is folded fresh, steamed with care, and served with our signature fiery garlic chutney.
+                </p>
+                <div class="video-actions">
+                    <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos%20from%20Myung's%20Momos." 
+                       class="btn btn-whatsapp" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <span>Order on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="video-control-corner">
+                <button class="video-toggle-btn" id="video-playback-toggle" aria-label="Toggle background video playback">
+                    <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                    <span>Pause</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= CRAFTSMANSHIP SECTION ================= -->
+        <section class="craftsmanship-section" id="craftsmanship">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <div class="eyebrow-badge">
+                        <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                        <span>THE DARJEELING STANDARD</span>
+                    </div>
+                    <h2>The Anatomy of a Perfect Momo</h2>
+                    <p>
+                        True Himalayan momos are defined by three indispensable pillars perfected over years of family practice.
+                    </p>
+                </div>
+
+                <div class="craft-cards-grid">
+                    <!-- Card 1 -->
+                    <article class="craft-card fade-in-up stagger-1">
+                        <div class="craft-card-img-wrap">
+                            <img src="images/paper-thin-craft.jpg" alt="Chef hand-pleating translucent paper-thin momo dough wrapper" loading="lazy">
+                            <span class="craft-card-step">01</span>
+                        </div>
+                        <div class="craft-card-body">
+                            <h3>Paper-Thin Wrapper</h3>
+                            <p>
+                                Hand-rolled dough that is delicate, soft, and never heavy. Rolled so fine it traps hot steam and succulent juices without ever feeling dense or rubbery.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="craft-card fade-in-up stagger-2">
+                        <div class="craft-card-img-wrap">
+                            <img src="images/momo raw.jpg" alt="Fresh seasoned vegetable and cottage cheese filling with Himalayan herbs" loading="lazy">
+                            <span class="craft-card-step">02</span>
+                        </div>
+                        <div class="craft-card-body">
+                            <h3>Slow-Marinated Filling</h3>
+                            <p>
+                                Fresh vegetables and cottage cheese with traditional Himalayan ginger and herbs. Gently tossed to let every aromatic note shine through upon the very first bite.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="craft-card fade-in-up stagger-3">
+                        <div class="craft-card-img-wrap">
+                            <img src="images/chutney-craft.jpg" alt="Vibrant fiery red garlic chili chutney in clay bowl" loading="lazy">
+                            <span class="craft-card-step">03</span>
+                        </div>
+                        <div class="craft-card-body">
+                            <h3>Fiery Garlic Chutney</h3>
+                            <p>
+                                Made fresh with red chilies, garlic, and roasted tomatoes. Stone-ground in daily small batches to deliver that legendary hill-station kick and smoky richness.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY SECTION ================= -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <div class="eyebrow-badge">
+                        <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                        <span>OUR FRESH KITCHEN & COMMUNITY</span>
+                    </div>
+                    <h2>Every Plate Tells a Story</h2>
+                    <p>
+                        A visual journey through our evening preparation, steaming bamboo baskets, fiery dips, and satisfied guests in Sagar. Click any image to view details.
+                    </p>
+                </div>
+
+                <div class="gallery-masonry">
+                    <!-- Item 1: Large Steamer Basket -->
+                    <div class="gallery-item span-8-row-2 fade-in-up stagger-1">
+                        <a href="images/hero-steam.jpg" class="gallery-trigger" 
+                           data-full="images/hero-steam.jpg" 
+                           data-title="Freshly Steamed In Bamboo Baskets" 
+                           data-desc="Hot steam rising from authentic bamboo steamers at our Sagar outlet.">
+                            <img src="images/hero-steam.jpg" alt="Freshly steamed Darjeeling momos" loading="lazy">
+                            <div class="gallery-hover-overlay">
+                                <div class="gallery-hover-info">
+                                    <span class="gallery-hover-title">Fresh From The Steamer</span>
+                                    <span class="gallery-hover-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 2: Fiery Garlic Chutney -->
+                    <div class="gallery-item span-4-row-2 fade-in-up stagger-2">
+                        <a href="images/chutney-craft.jpg" class="gallery-trigger" 
+                           data-full="images/chutney-craft.jpg" 
+                           data-title="Signature Fiery Garlic Chutney" 
+                           data-desc="Made fresh daily with sun-ripened red chilies, garlic, and roasted tomatoes.">
+                            <img src="images/chutney-craft.jpg" alt="Fiery garlic red chutney in rustic bowl" loading="lazy">
+                            <div class="gallery-hover-overlay">
+                                <div class="gallery-hover-info">
+                                    <span class="gallery-hover-title">The Signature Chutney</span>
+                                    <span class="gallery-hover-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 3: Hand Pleating Close-up -->
+                    <div class="gallery-item span-4-row-2 fade-in-up stagger-1">
+                        <a href="images/paper-thin-craft.jpg" class="gallery-trigger" 
+                           data-full="images/paper-thin-craft.jpg" 
+                           data-title="Art of The Fold" 
+                           data-desc="Folding paper-thin dough pleats with traditional Himalayan precision.">
+                            <img src="images/paper-thin-craft.jpg" alt="Chef folding delicate momo pleats" loading="lazy">
+                            <div class="gallery-hover-overlay">
+                                <div class="gallery-hover-info">
+                                    <span class="gallery-hover-title">Paper-Thin Pleats</span>
+                                    <span class="gallery-hover-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 4: Happy Customers in Sagar -->
+                    <div class="gallery-item span-4-row-2 fade-in-up stagger-2">
+                        <a href="images/happy-customers.jpg" class="gallery-trigger" 
+                           data-full="images/happy-customers.jpg" 
+                           data-title="Evening Gatherings in Sagar" 
+                           data-desc="Friends and momo lovers enjoying hot plates in Makronia.">
+                            <img src="images/happy-customers.jpg" alt="Happy customers enjoying hot momos outside" loading="lazy">
+                            <div class="gallery-hover-overlay">
+                                <div class="gallery-hover-info">
+                                    <span class="gallery-hover-title">Moments & Smiles</span>
+                                    <span class="gallery-hover-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 5: Mother & Son Kitchen -->
+                    <div class="gallery-item span-4-row-2 fade-in-up stagger-3">
+                        <a href="images/mother-story.jpg" class="gallery-trigger" 
+                           data-full="images/mother-story.jpg" 
+                           data-title="Handcrafted Family Kitchen" 
+                           data-desc="Mother and son folding momos side by side with ancestral devotion.">
+                            <img src="images/mother-story.jpg" alt="Mother and son kitchen preparation" loading="lazy">
+                            <div class="gallery-hover-overlay">
+                                <div class="gallery-hover-info">
+                                    <span class="gallery-hover-title">Family Devotion</span>
+                                    <span class="gallery-hover-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= LIGHTBOX MODAL ================= -->
+        <div class="lightbox-modal" id="gallery-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Lightbox">
+            <div class="lightbox-backdrop"></div>
+            <div class="lightbox-dialog">
+                <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="lightbox-stage">
+                    <button class="lightbox-nav-btn lightbox-prev" id="lightbox-prev" aria-label="Previous Image">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <img src="" alt="" id="lightbox-img">
+                    <button class="lightbox-nav-btn lightbox-next" id="lightbox-next" aria-label="Next Image">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="lightbox-info-bar">
+                    <div class="lightbox-caption" id="lightbox-caption"></div>
+                    <span class="lightbox-counter" id="lightbox-counter"></span>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-col links-col">
-            <h4 class="footer-heading">Navigation</h4>
-            <ul class="footer-nav">
-                <li><a href="#home">Home Experience</a></li>
-                <li><a href="#story">Our Heritage</a></li>
-                <li><a href="#gallery">Kitchen Gallery</a></li>
-            </ul>
+        <!-- ================= CUSTOMER LOVE (TESTIMONIALS) ================= -->
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <div class="eyebrow-badge">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <span>WORDS FROM OUR COMMUNITY</span>
+                    </div>
+                    <h2>Customer Love</h2>
+                    <p>
+                        Authentic experiences shared by food enthusiasts across Sagar who have tasted the genuine Darjeeling difference.
+                    </p>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card fade-in-up stagger-1">
+                        <div class="review-rating" aria-label="5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            “The skin of the momo is so delicate and thin—completely unlike the heavy, thick dough you find elsewhere. And that garlic chutney has that authentic mountain punch!”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">AK</div>
+                            <div class="author-meta">
+                                <span class="author-name">Ananya K.</span>
+                                <span class="author-loc">Makronia, Sagar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card fade-in-up stagger-2">
+                        <div class="review-rating" aria-label="5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            “Having lived in the northeast, I was constantly craving authentic hill-style momos in Sagar. Myung’s Momos hits the exact nostalgia point. Pure handcrafted warmth.”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">RS</div>
+                            <div class="author-meta">
+                                <span class="author-name">Rohit Sharma</span>
+                                <span class="author-loc">Civil Lines, Sagar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card fade-in-up stagger-3">
+                        <div class="review-rating" aria-label="5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            “Ordering on WhatsApp is seamless. The momos arrive steaming hot, packed with fresh vegetables and subtle ginger flavors that prove everything is made from scratch.”
+                        </p>
+                        <div class="review-author">
+                            <div class="author-avatar">PT</div>
+                            <div class="author-meta">
+                                <span class="author-name">Pooja Tiwari</span>
+                                <span class="author-loc">University Road, Sagar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VISIT US ================= -->
+        <section class="visit-section" id="visit">
+            <div class="container">
+                <div class="visit-grid">
+                    <div class="visit-content fade-in-up">
+                        <div class="eyebrow-badge">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <span>OUR EVENING OUTLET</span>
+                        </div>
+                        <h2>Freshly Steamed.<br><span class="accent-serif">Served with Love.</span></h2>
+                        <p>
+                            Join us every evening in Makronia as the steamers fire up, or connect with us directly on WhatsApp to reserve your fresh batch.
+                        </p>
+
+                        <ul class="visit-details-list">
+                            <li class="visit-item">
+                                <div class="visit-item-icon">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                </div>
+                                <div class="visit-item-info">
+                                    <strong>Our Address</strong>
+                                    <span>Opposite Narayan Hospital, Makronia, Sagar, M.P.</span>
+                                </div>
+                            </li>
+
+                            <li class="visit-item">
+                                <div class="visit-item-icon">
+                                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                                </div>
+                                <div class="visit-item-info">
+                                    <strong>Operating Hours</strong>
+                                    <span>Open every day, 7:00 PM – 10:00 PM</span>
+                                </div>
+                            </li>
+
+                            <li class="visit-item">
+                                <div class="visit-item-icon">
+                                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="visit-item-info">
+                                    <strong>Direct Contact</strong>
+                                    <a href="tel:+917999921743">+91 79999 21743</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="visit-actions">
+                            <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos%20from%20Myung's%20Momos." 
+                               class="btn btn-whatsapp" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="visit-map-card fade-in-up stagger-1">
+                        <div class="visit-map-overlay-badge">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                            <span>Opposite Narayan Hospital, Makronia</span>
+                        </div>
+                        <!-- Embedded Google Map of Makronia Sagar -->
+                        <iframe 
+                            title="Myung's Momos Location Map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14605.340078716358!2d78.7770857!3d23.8590684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3978d145b2064c11%3A0x88981f9a0c1ba5db!2sMakronia%2C%20Sagar%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1716000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <div class="footer-col footer-brand">
+                    <a href="#home" class="brand-link">
+                        <img src="images/logo.jpg" alt="Myung's Momos" class="brand-logo-img">
+                        <div class="brand-text">
+                            <span class="brand-title">Myung's Momos</span>
+                            <span class="brand-tag">From the Hills to Your Home</span>
+                        </div>
+                    </a>
+                    <p class="footer-statement">
+                        Authentic Darjeeling-style handcrafted momos in Sagar, M.P. Dedicated to paper-thin wrappers, fresh ingredients, and signature fiery garlic chutney crafted with a mother’s recipe.
+                    </p>
+                    <a href="https://instagram.com/myungsmomos.sagar" target="_blank" rel="noopener noreferrer" class="insta-pill-link">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Follow @myungsmomos.sagar</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#craftsmanship">The Craftsmanship</a></li>
+                        <li><a href="#gallery">Fresh Gallery</a></li>
+                        <li><a href="#reviews">Customer Love</a></li>
+                        <li><a href="#visit">Visit Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Visit & Order</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Opposite Narayan Hospital, Makronia, Sagar, M.P.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Open Every Day: 7:00 PM – 10:00 PM</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+917999921743">+91 79999 21743</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos%20from%20Myung's%20Momos." target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Myung’s Momos. All rights reserved.</p>
+                <p>From the Hills to Your Home <i class="fa-solid fa-heart heart-icon"></i> Handcrafted in Sagar</p>
+            </div>
         </div>
+    </footer>
 
-        <div class="footer-col info-col">
-            <h4 class="footer-heading">Visit Our Outlet</h4>
-            <ul class="info-list">
-                <li>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Opposite Narayan Hospital,<br>Makronia, Sagar (M.P.)</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-clock"></i>
-                    <span>7:00 PM – 10:00 PM<br><small>Open Everyday</small></span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+91 79999 21743</span>
-                </li>
-            </ul>
-        </div>
+    <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+    <aside class="floating-whatsapp-widget" aria-label="Quick WhatsApp Order">
+        <span class="floating-wa-tooltip">Order Fresh Momos</span>
+        <a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos%20from%20Myung's%20Momos." 
+           class="floating-whatsapp-btn" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           aria-label="Chat and Order on WhatsApp">
+            <span class="floating-pulse-beacon" aria-hidden="true"></span>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </aside>
 
-    </div>
-
-    <div class="footer-bottom">
-        <div class="footer-bottom-container">
-            <p>© 2026 Myung's Momos. All Rights Reserved.</p>
-            <p class="crafted-credit">Crafted with <i class="fa-solid fa-heart red-heart"></i> for Momo Lovers</p>
-        </div>
-    </div>
-</footer>
-
-<!-- Floating Actions -->
-<a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20momos." class="floating-wa" target="_blank" aria-label="Order on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<a href="https://wa.me/917999921743?text=Hi!%20I'd%20like%20to%20order%20fresh%20momos." 
-   class="vertical-order-tab" 
-   target="_blank" 
-   aria-label="Order Momos Online">
-    <i class="fa-brands fa-whatsapp"></i>
-    <span>ORDER FRESH MOMOS</span>
-</a>
-
-<!-- JavaScript Files -->
-<script src="js/script.js"></script>
-<button class="hamburger">☰</button>
-<script src="js/responsive.js"></script>
+    <!-- Main JavaScript File -->
+    <script src="js/main.js"></script>
 </body>
 </html>

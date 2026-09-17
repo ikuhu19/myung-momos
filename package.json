@@ -1,0 +1,13 @@
+{
+  "name": "myung-momos",
+  "version": "1.0.0",
+  "description": "Website for Myung's Momos - Authentic Darjeeling Momos in Sagar, M.P.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["momos", "darjeeling", "sagar", "restaurant"],
+  "author": "Myung's Momos",
+  "license": "ISC"
+}
